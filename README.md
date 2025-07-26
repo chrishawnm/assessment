@@ -13,8 +13,8 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
 2. Interpretation:
    i. gold_user_engagement:
         Below are the fields I used to highlight in this table.
-          - sessions
-          - num_event_types
+         <p> sessions </p>
+          num_event_types
           total_docs
           types: I did a group concat for the types field because I wanted to get a field to show if the user may have used all events. 
           avg_docs_per_session
