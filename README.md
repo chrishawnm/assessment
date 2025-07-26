@@ -12,9 +12,9 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
   ii. I looked over the following video to get a better understanding of the num docs field and why vault was more than the other event types: https://www.harvey.ai/platform/vault
 2. Interpretation:
    i. gold_user_engagement:
-   
         Below are the fields I used to highlight in this table.
-         <p> sessions </p>
+   
+          sessions
           num_event_types
           total_docs
           types: I did a group concat for the types field because I wanted to get a field to show if the user may have used all events. 
@@ -26,6 +26,7 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
           avg_docs_per_active_day
    ii. gold_firm_usage_summary:  I decided to break down by month because if we look at overall then some firms will always tend to look like they have a lot of activity because of the number of         users they have on the platform.  
         Below are the fields I used to highlight in this table.
+   
           FIRM_SIZE
           ARR_IN_THOUSANDS
           active_users
@@ -41,6 +42,7 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
           arr_per_active_user
    iii. gold_cohort_analysis: I decided to go with cohort because it helps with understanding retention overtime, enagement overtime and great for a/b experimentation and campaign impact.
         Below are the fields I used to highlight in this table.
+   
           activity_month: current activity of the user within the month
           active_users: number of active users which I elected to just be number of distinct users
           avg_events_per_user: average number of events use has been in the month
