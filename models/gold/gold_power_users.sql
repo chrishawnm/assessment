@@ -1,5 +1,6 @@
 SELECT
-  r.*,
+  r.mon_year,
+  user_id,
   CASE
     WHEN r.engagement_score >= p.p75 THEN 'High'
     WHEN r.engagement_score >= p.p50 THEN 'Medium'
