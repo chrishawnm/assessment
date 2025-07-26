@@ -1,6 +1,6 @@
 {
   "name": "dbt Codespace",
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
-  "postCreateCommand": "pip install dbt-core dbt-postgres",
+  "postCreateCommand": "pip install dbt-core dbt-duckdb",
   "forwardPorts": [8080]
 }
