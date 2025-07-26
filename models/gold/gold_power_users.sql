@@ -1,5 +1,5 @@
 SELECT
-  r.mon_year,
+  r.mon_year as mon_year,
   user_id,
   CASE
     WHEN r.engagement_score >= p.p75 THEN 'High'
