@@ -2,7 +2,7 @@ Hello!
 
 Here's my submission for this assessment.
 
-Questions to Analytics Questions: [link text](extras/Harvey_Analytics_Questions.ipynb)
+Questions to Analytics Questions: [My Answers](extras/Harvey_Analytics_Questions.ipynb)
 
 data modeling (dbt)
 
