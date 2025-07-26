@@ -2,6 +2,8 @@ Hello!
 
 Here's my submission for this assessment.
 
+Questions to Analytics Questions: 
+
 data modeling (dbt)
 
 Here's a view of my data model. I decided to go with a medallion architecture (bronze/silver/gold) in order fit the use case better than a dimensional data model.
@@ -49,7 +51,5 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
           active_users: number of active users which I elected to just be number of distinct users
           avg_events_per_user: average number of events use has been in the month
           avg_docs_per_user: average number of docs user used per event in the month (may be skewed if they used only one)
-   
-
 
 4. Materializations: Not every table was materialized to a table output. I used three materializations (table, views, ephemeral). For ephemeral tables, I mainly did this because they were mainly in my silver (transformation layer) and a lot of the scripts I was using were calculations for a view or table. It also helped me with storage. I decided to have the bronze layer in which all of the raw data is at as views because we aren't really using these tables. For my gold tables, those are all materialized as tables since we want our end users to be able to query from them and use them in dashboards frequently. 
