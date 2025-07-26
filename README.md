@@ -12,6 +12,7 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
   ii. I looked over the following video to get a better understanding of the num docs field and why vault was more than the other event types: https://www.harvey.ai/platform/vault
 2. Interpretation:
    i. gold_user_engagement:
+   
         Below are the fields I used to highlight in this table.
          <p> sessions </p>
           num_event_types
