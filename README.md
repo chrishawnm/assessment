@@ -11,7 +11,7 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
   i. I assumed that the datasets that were provided were going to be my raw datasets so I have them as my bronze datasets in which I don't make much changes to them.
   ii. I looked over the following video to get a better understanding of the num docs field and why vault was more than the other event types: https://www.harvey.ai/platform/vault
 2. Interpretation:
-<n>i. gold_user_engagement:</n>
+<p>i. gold_user_engagement:</p>
    
           Fields Used:
           sessions
