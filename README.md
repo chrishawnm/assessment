@@ -11,7 +11,7 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
   i. I assumed that the datasets that were provided were going to be my raw datasets so I have them as my bronze datasets in which I don't make much changes to them.
   ii. I looked over the following video to get a better understanding of the num docs field and why vault was more than the other event types: https://www.harvey.ai/platform/vault
 2. Interpretation:
-   i. gold_user_engagement:
+<n>i. gold_user_engagement:</n>
    
           Fields Used:
           sessions
@@ -41,7 +41,6 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
           arr_per_doc
           arr_per_active_user
    iii. gold_cohort_analysis: I decided to go with cohort because it helps with understanding retention overtime, enagement overtime and great for a/b experimentation and campaign impact.
-        Below are the fields I used to highlight in this table.
 
           Fields Used:
           activity_month: current activity of the user within the month
@@ -51,4 +50,4 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
    
 
 
-3. Materializations: Not every table was materialized to a table output. I used three materializations (table, views, ephemeral). For ephemeral tables, I mainly did this because they were mainly in my silver (transformation layer) and a lot of the scripts I was using were calculations for a view or table. It also helped me with storage. I decided to have the bronze layer in which all of the raw data is at as views because we aren't really using these tables. For my gold tables, those are all materialized as tables since we want our end users to be able to query from them and use them in dashboards frequently. 
+4. Materializations: Not every table was materialized to a table output. I used three materializations (table, views, ephemeral). For ephemeral tables, I mainly did this because they were mainly in my silver (transformation layer) and a lot of the scripts I was using were calculations for a view or table. It also helped me with storage. I decided to have the bronze layer in which all of the raw data is at as views because we aren't really using these tables. For my gold tables, those are all materialized as tables since we want our end users to be able to query from them and use them in dashboards frequently. 
