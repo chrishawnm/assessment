@@ -6,14 +6,18 @@ Questions to Analytics Questions: [My Answers](extras/Harvey_Analytics_Questions
 
 data modeling (dbt)
 
-Final table outputs can be found here that are explained below. [gold_output tables](final_output_tables/)
+
 
 Here's a view of my data model. I decided to go with a medallion architecture (bronze/silver/gold) in order fit the use case better than a dimensional data model.
+data models can be found [here:](models/):
 ![Alt text](extras/lineage.png)
 
 1. Assumptions:
   i. I assumed that the datasets that were provided were going to be my raw datasets so I have them as my bronze datasets in which I don't make much changes to them.
   ii. I looked over the following video to get a better understanding of the num docs field and why vault was more than the other event types: https://www.harvey.ai/platform/vault
+
+Final table outputs can be found here that are explained below. [gold_output tables](final_output_tables/)
+
 2. Interpretation:
 <p>i. gold_user_engagement: For the user engagement table I wanted to use metrics that I believe were a good represenation of the users engagement and that I could use down the line to create a        power user ranking system.</p>
    
@@ -54,4 +58,4 @@ Here's a view of my data model. I decided to go with a medallion architecture (b
           avg_events_per_user: average number of events use has been in the month
           avg_docs_per_user: average number of docs user used per event in the month (may be skewed if they used only one)
 
-4. Materializations: Not every table was materialized to a table output. I used three materializations (table, views, ephemeral). For ephemeral tables, I mainly did this because they were mainly in my silver (transformation layer) and a lot of the scripts I was using were calculations for a view or table. It also helped me with storage. I decided to have the bronze layer in which all of the raw data is at as views because we aren't really using these tables. For my gold tables, those are all materialized as tables since we want our end users to be able to query from them and use them in dashboards frequently. 
+3. Materializations: Not every table was materialized to a table output. I used three materializations (table, views, ephemeral). For ephemeral tables, I mainly did this because they were mainly in my silver (transformation layer) and a lot of the scripts I was using were calculations for a view or table. It also helped me with storage. I decided to have the bronze layer in which all of the raw data is at as views because we aren't really using these tables. For my gold tables, those are all materialized as tables since we want our end users to be able to query from them and use them in dashboards frequently. 
