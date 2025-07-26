@@ -6,7 +6,7 @@ Questions to Analytics Questions: [My Answers](extras/Harvey_Analytics_Questions
 
 data modeling (dbt)
 
-Final table outputs can be found here that are explained below. [gold_output tables](final_out_tables/)
+Final table outputs can be found here that are explained below. [gold_output tables](final_output_tables/)
 
 Here's a view of my data model. I decided to go with a medallion architecture (bronze/silver/gold) in order fit the use case better than a dimensional data model.
 ![Alt text](extras/lineage.png)
