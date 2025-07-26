@@ -1,0 +1,14 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "dbt on Python",
+  // pick a base image with Python 3.x pre‑installed
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  // install the dbt adapter(s) you need
+  "postCreateCommand": "pip install dbt-core dbt-postgres dbt-snowflake",
+  // forward any ports you might need for docs, tests, etc.
+  "forwardPorts": [8080],
+  // (optional) allow Docker in Docker if you need it
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:2": {}
+  }
+}
